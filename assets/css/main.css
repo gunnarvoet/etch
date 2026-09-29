@@ -199,7 +199,25 @@ main#content figure {
 main#content figure img {
     display: block;
     max-width: 100%;
+    max-height: 85vh;
+    width: auto;
     margin: 0 auto;
+}
+
+/* two portrait photos side by side, see shortcodes/pair.html */
+main#content figure.pair .pair-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+main#content figure.pair .pair-row img {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: calc(50% - 3px);
+    width: auto;
+    height: auto;
+    margin: 0;
 }
 
 main#content figure figcaption {

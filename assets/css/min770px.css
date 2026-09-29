@@ -39,6 +39,10 @@ main#content figure img {
     max-width: 108%;
 }
 
+main#content figure.pair .pair-row {
+    width: 108%;
+}
+
 main#content pre {
     width: 108%;
     margin-left: -3.8%;

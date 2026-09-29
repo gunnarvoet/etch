@@ -1,0 +1,11 @@
+{{- /* Two photos side by side, for portrait shots.
+Usage: {{< pair left="/path/a.jpg" right="/path/b.jpg" caption="..." >}} */ -}}
+<figure class="pair">
+  <div class="pair-row">
+    <img src="{{ .Get "left" }}" alt="{{ .Get "alt" | default (.Get "caption" | markdownify) | plainify }}">
+    <img src="{{ .Get "right" }}" alt="{{ .Get "alt" | default (.Get "caption" | markdownify) | plainify }}">
+  </div>
+  {{- with .Get "caption" }}
+  <figcaption><p>{{ . | markdownify }}</p></figcaption>
+  {{- end }}
+</figure>
